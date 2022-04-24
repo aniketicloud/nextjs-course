@@ -9,7 +9,7 @@ const PortfolioProjectPage = () => {
   return (
     <div>
       <h1>
-        Portfolio Project Page Page with the router of portfoilio/
+        Portfolio Project Page with the router of portfoilio/
         {router.query.projectid}
       </h1>
     </div>
