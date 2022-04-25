@@ -9,12 +9,22 @@ const ClientsPage = () => {
     <div>
       <h1>Clients Page</h1>
       <h3>e.g. List of all clients</h3>
+      {/* href={`/clients/${client.id}`} */}
 
       <ul>
         {clients.map((client) => {
           return (
             <li key={client.id}>
-              <Link href={`/clients/${client.id}`}>{client.name}</Link>
+              <Link
+                href={{
+                  pathname: "/clients/[clientid]",
+                  query: {
+                    clientid: client.id,
+                  },
+                }}
+              >
+                {client.name}
+              </Link>
             </li>
           );
         })}
